@@ -33,8 +33,47 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': {
-    view: 'homepage'
-  }
+    view: 'index',
+    locals: {
+      title: 'Home Page'
+    }
+  }, 
+
+  '/performance': {
+    view: 'performance',
+    locals: {
+      title: 'Performance'
+    }
+  }, 
+
+
+  '/blog': {
+    view: 'blog',
+    locals: {
+      title: 'Blog'
+    }
+  }, 
+
+
+  '/architecture': {
+    view: 'architecture',
+    locals: {
+      title: 'Architecture'
+    }
+  }, 
+
+
+  '/about': {
+    view: 'about',
+    locals: {
+      title: 'About Us'
+    }
+  }, 
+
+
+
+
+
 
   /***************************************************************************
   *                                                                          *
