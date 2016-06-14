@@ -76,7 +76,12 @@ module.exports.routes = {
     locals: {
       title: 'Dummies'
     }
-  }
+  },
+
+  '/admin/about': {
+    controller: 'AboutAdminController',
+    action: 'edit'
+  },
 
 
 

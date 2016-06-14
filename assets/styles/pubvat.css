@@ -40,3 +40,14 @@ a.navbar-brand.isActived {
 /*	color: black;
 	background-color: #C1FFFA;*/
 }
+
+/*div.row, div.col-md-8 {
+	size: 100%;
+}*/
+
+
+textarea#about-content-area {
+	resize: vertical; 
+	height: 200px;
+	width:80%;
+}
