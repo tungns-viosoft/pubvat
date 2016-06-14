@@ -21,3 +21,22 @@ canvas {
     -webkit-user-select: none;
     -ms-user-select: none;
 }
+
+/*#bs-example-navbar-collapse-1 ul li a:active{
+	background-color: #95BDC1;
+}*/
+
+
+#bs-example-navbar-collapse-1 ul li a.isActived {
+	font-weight: bold;
+	color: black;
+	background-color: #C1FFFA;
+}
+
+
+a.navbar-brand.isActived {
+	color: white;
+	font-weight: bold;
+/*	color: black;
+	background-color: #C1FFFA;*/
+}

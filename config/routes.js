@@ -71,7 +71,12 @@ module.exports.routes = {
   }, 
 
 
-
+  '/dummies': {
+    view: 'dummies',
+    locals: {
+      title: 'Dummies'
+    }
+  }
 
 
 

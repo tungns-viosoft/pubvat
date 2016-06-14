@@ -4,11 +4,11 @@
     <title><%=typeof title == 'undefined' ? 'Viosoft' : title%></title>
 
     <!-- Viewport mobile tag for sensible mobile support -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -67,6 +67,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/">Home Page</a>
             </div>
@@ -90,13 +91,41 @@
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
+
+        <script type="text/javascript">
+            
+            $(document).ready(function (){
+
+                var url = window.location.pathname;
+
+                var homeUrl = $("a.navbar-brand").attr("href");
+                if(url === homeUrl){
+                    $("a.navbar-brand").addClass("isActived");
+                }
+
+
+                $("#bs-example-navbar-collapse-1 ul li a").each(function(){
+                    // and test its normalized href against the url pathname regexp
+                    // if(urlRegExp.test(this.href.replace(/\/$/,''))){
+                        var n = url.lastIndexOf(this.pathname);
+                        // alert(this.pathname + " " + n);
+                    if( n >= 0){    
+                        $(this).addClass('isActived');
+                    }
+                });
+
+            });
+
+
+        </script> 
     </nav>
 
     <!-- Page Content -->
     <div class="container">
 
-    <%- body %>
+        <%- body %>
 
+        <hr>
         <!-- Footer -->
         <footer>
             <div class="row">
@@ -157,5 +186,7 @@
 
     -->
 
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery-2.2.3.js"></script>
   </body>
 </html>
