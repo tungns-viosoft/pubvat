@@ -64,10 +64,8 @@ module.exports.routes = {
 
 
   '/about': {
-    view: 'about',
-    locals: {
-      title: 'About Us'
-    }
+    controller: 'AboutController',
+    action: 'view'
   }, 
 
 
@@ -78,11 +76,36 @@ module.exports.routes = {
     }
   },
 
-  '/admin/about': {
-    controller: 'AboutAdminController',
-    action: 'edit'
+
+  '/admin/index': {
+    view: 'admin/index',
+    locals: {
+      layout: 'admin/layoutadmin',
+      title: 'Admin page'
+    }
   },
 
+
+  '/admin/about': {
+    controller: 'AboutAdminController',
+    action: 'load'
+  },
+
+  '/admin/about/update': {
+    controller: 'AboutAdminController',
+    action: 'update'
+  },
+
+  '/admin': {
+    controller: 'IndexAdminController',
+    action: 'redirect'
+  },
+
+
+  '/admin/*': {
+    controller: 'IndexAdminController',
+    action: 'redirect'
+  },
 
 
   /***************************************************************************
