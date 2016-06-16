@@ -7,7 +7,7 @@
 
 module.exports = {
 	load: function(req, res) {
-
+		
 		About.find().exec(function (err, data) { 
 
 			if (err) {

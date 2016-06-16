@@ -7,6 +7,8 @@
 
 module.exports = {
 	view: function(req,res){
+
+      	req.session.authenticated = false;
 		About.find().exec(function(err, data){
 			if(err){
 				console.log('error about');
