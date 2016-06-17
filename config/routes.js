@@ -109,10 +109,7 @@ module.exports.routes = {
 
 /*** SERVER ***/
 
-  '/perf': {
-
-  }
-
+  'post /perf/new': 'PerfController.new',
 
 
   /***************************************************************************

@@ -33,9 +33,35 @@ var moris =
    ]
 };
 
-var data =
+var dataset =
 {
-  session: '123456',
+  session: 'string',
+  usecase: 'string',
+
+  vnf: {
+    name: 'string',
+    os: 'string',
+    sw: [
+      {
+        name: 'string',
+        version: 'string'
+      }, 
+      {
+        name: 'string',
+        version: 'string'
+      }
+    ],
+    hw: {
+      brand: 'string',
+      cpus: 8,
+      ram: 32,
+      nic: 'string'
+    }
+  },
+
+  testcase: 69,
+
+
   size: [64,128,256,512,1024,1028,1518],
 
   lines: [
