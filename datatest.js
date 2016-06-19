@@ -1,38 +1,3 @@
-var moris = 
-{
-  "session":"1465972342253",
-  "result":[
-    { 
-      "size": 64,
-      "zero_loss": 47
-    },
-    { 
-      "size": 128,
-      "zero_loss": 81
-    },
-    { 
-      "size": 256,
-      "zero_loss": 84
-    },
-    { data
-      "size": 512,
-      "zero_loss": 87
-    },
-    { 
-      "size": 1024,
-      "zero_loss": 87
-    },
-    { 
-      "size": 1028,
-      "zero_loss": 90
-    },
-    { 
-      "size": 1518,
-      "zero_loss": 90
-    }
-   ]
-};
-
 var dataset =
 {
   session: 'string',
@@ -74,5 +39,40 @@ var dataset =
   ]
 }; 
 
+
+var moris = 
+{
+  "session":"1465972342253",
+  "result":[
+    { 
+      "size": 64,
+      "zero_loss": 47
+    },
+    { 
+      "size": 128,
+      "zero_loss": 81
+    },
+    { 
+      "size": 256,
+      "zero_loss": 84
+    },
+    { data
+      "size": 512,
+      "zero_loss": 87
+    },
+    { 
+      "size": 1024,
+      "zero_loss": 87
+    },
+    { 
+      "size": 1028,
+      "zero_loss": 90
+    },
+    { 
+      "size": 1518,
+      "zero_loss": 90
+    }
+   ]
+};
 
 

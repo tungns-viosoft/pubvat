@@ -21,4 +21,9 @@ module.exports = {
   //   connection: 'someMongodbServer'
   // }
 
+  //tungns
+  	// models: {
+  	// 	connection: 'someMongodbServer'
+  	// }
+
 };
