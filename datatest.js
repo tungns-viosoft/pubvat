@@ -3,8 +3,8 @@ var dataset =
   session: 'string',
   usecase: 'string',
 
+  vnfname: 'string',
   vnf: {
-    name: 'string',
     os: 'string',
     sw: [
       {

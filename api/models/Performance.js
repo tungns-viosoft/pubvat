@@ -8,6 +8,7 @@
 module.exports = {
 
   attributes: {
+
   	session: {
   		type: 'string'
   	}, 
@@ -15,6 +16,11 @@ module.exports = {
   	usecase: {
   		type: 'string'
   	}, 
+
+  	vnfname: {
+  		type: 'string',
+      notNull: true
+  	},
 
   	vnf: {
   		type: 'json'

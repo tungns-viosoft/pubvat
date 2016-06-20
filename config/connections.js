@@ -49,7 +49,7 @@ module.exports.connections = {
   // },
 
   /***************************************************************************
-  *                                                                          *
+  *                                                                          *kerberos
   * MongoDB is the leading NoSQL database.                                   *
   * http://en.wikipedia.org/wiki/MongoDB                                     *
   *                                                                          *

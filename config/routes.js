@@ -39,12 +39,7 @@ module.exports.routes = {
     }
   }, 
 
-  '/performance': {
-    view: 'performance',
-    locals: {
-      title: 'Performance'
-    }
-  }, 
+  '/performance': 'PerformanceController.view', 
 
 
   '/blog': {
@@ -109,7 +104,7 @@ module.exports.routes = {
 
 /*** SERVER ***/
 
-  'post /perf/new': 'PerfController.new',
+  'post /performance/new': 'PerformanceController.new',
 
 
   /***************************************************************************
