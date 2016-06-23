@@ -42,12 +42,20 @@ module.exports.routes = {
   '/performance': 'PerformanceController.view', 
 
 
-  '/blog': {
-    view: 'blog',
-    locals: {
-      title: 'Blog'
-    }
-  }, 
+  '/blog': 'BlogController.view',
+
+  '/blog/viewentry/:id': 'BlogController.viewentry',
+
+
+  'post /blog/newentry': 'BlogController.newentry', 
+
+
+  'post /blog/editentry': 'BlogController.editentry',
+
+
+  'post /blog/deleteentry': 'BlogController.deleteentry',
+
+
 
 
   '/architecture': {

@@ -15,7 +15,13 @@ module.exports = {
 
   	body: {
   		type: 'string'
-  	}
+  	},
+
+  	publish_date:{
+  		type: 'datetime'
+  	},
+
+	
 
   }
 };
