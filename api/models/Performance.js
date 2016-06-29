@@ -9,6 +9,12 @@ module.exports = {
 
   attributes: {
 
+    // id: {    
+    //   type: 'integer',
+    //   autoIncrement: true,
+    //   unique: true
+    // },
+
   	session: {
   		type: 'string'
   	}, 

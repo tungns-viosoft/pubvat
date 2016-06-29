@@ -7,7 +7,7 @@
 
 module.exports = {
 
-	new: function(req,res){
+	add: function(req,res){
 
  		var x = req.body;
 
@@ -17,10 +17,62 @@ module.exports = {
  			} else {
  				console.log('Create Performance success');
  				console.log(data);
- 				res.send(data.session);
+ 				res.send(data);
  			}
  		});
+ 	},
 
+ 	read: function(req,res){
+ 		var id = req.params.id;
+
+ 		Performance.findOne({"id": id}).exec(function(err, data){
+ 			if(err){
+ 				console.log('Error Performance read. Data: ' + data);
+ 			} else {
+ 				console.log('Found Performance');
+ 				console.log(data);
+ 				res.send(data);
+ 			}
+ 		});
+ 	},
+
+ 	browse: function(req,res){
+		Performance.findOne().exec(function(err, data){
+ 			if(err){
+ 				console.log('Error Performance create. Data: ' + data);
+ 			} else {
+ 				console.log('Found all Performance');
+ 				console.log(data);
+ 				res.send(data);
+ 			}
+ 		});
+ 	},
+
+ 	edit: function(req,res){
+		var id = req.params.id;
+
+ 		Performance.update({"id": id}).exec(function(err, data){
+ 			if(err){
+ 				console.log('Error Performance update. Data: ' + data);
+ 			} else {
+ 				console.log('Update Performance');
+ 				console.log(data);
+ 				res.send(data);
+ 			}
+ 		});
+ 	},
+
+ 	destroy: function(req,res){
+		var id = req.params.id;
+
+ 		Performance.destroy({"id": id}).exec(function(err){
+ 			if(err){
+ 				console.log('Error Performance destroy');
+ 			} else {
+ 				console.log('Destroy Performance');
+ 				res.status(200);
+ 			}
+ 		});
  	},
 
 
@@ -38,8 +90,6 @@ module.exports = {
 				chartData: data
 			});
 		});
-
-
 	}
 };
 

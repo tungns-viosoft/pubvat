@@ -112,7 +112,13 @@ module.exports.routes = {
 
 /*** SERVER ***/
 
-  'post /performance/new': 'PerformanceController.new',
+  'POST /api/performance': 'PerformanceController.add',
+
+  'GET /api/performance/:id': 'PerformanceController.read',
+
+  'PUT /api/performance/:id': 'PerformanceController.edit',
+
+  'DEL /api/performance/:id': 'PerformanceController.destroy',
 
 
   /***************************************************************************

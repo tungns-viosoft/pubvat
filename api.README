@@ -1,7 +1,13 @@
 - Send new dataset to publication site:
 
-POST /perf/new
 
+'POST /api/performance': 'PerformanceController.add',
+
+'GET /api/performance/:id': 'PerformanceController.read',
+
+'PUT /api/performance/:id': 'PerformanceController.edit',
+
+'DEL /api/performance/:id': 'PerformanceController.destroy',
 
 
 === example json data to post ===
@@ -48,3 +54,46 @@ var dataset =
     {zero_loss: [4,4,4,4,4,4,4,4]}
   ]
 }; 
+
+
+postman:
+
+{
+"session": "yyy",
+"usecase": "hehe",
+
+"vnfname": "srt",
+"vnf": {
+  "os": "bos",
+  "sw": [
+    {
+      "name": "bkav",
+      "version": "6.9"
+    }, 
+    {
+      "name": "thiendia",
+      "version": "9.6"
+    }
+  ],
+  "hw": {
+    "brand": "bphone",
+    "cpus": 8,
+    "ram": 32,
+    "nic": "baaa"
+  }
+},
+
+"testcase": 69,
+
+
+"size": [64,128,256,512,1024,1028,1518],
+
+"lines": [
+  {"zero_loss": [1,2,3,4,5,6,7]},
+  {"zero_loss": [8,7,6,5,4,3,2]},
+  {"zero_loss": [5,7,3,9,1,5,2]},
+  {"zero_loss": [9,5,1,3,7,4,6]},
+  {"zero_loss": [1,8,4,5,7,3,2]},
+  {"zero_loss": [4,4,4,4,4,4,4]}
+]
+}
