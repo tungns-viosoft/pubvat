@@ -43,6 +43,7 @@ module.exports.routes = {
 
 
   '/blog': 'BlogController.view',
+  
 
   '/blog/viewentry/:id': 'BlogController.viewentry',
 
@@ -112,6 +113,8 @@ module.exports.routes = {
 
 /*** SERVER ***/
 
+  'GET /api/performance': 'PerformanceController.browse',
+  
   'POST /api/performance': 'PerformanceController.add',
 
   'GET /api/performance/:id': 'PerformanceController.read',

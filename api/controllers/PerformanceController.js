@@ -37,7 +37,7 @@ module.exports = {
  	},
 
  	browse: function(req,res){
-		Performance.findOne().exec(function(err, data){
+		Performance.find().exec(function(err, data){
  			if(err){
  				console.log('Error Performance create. Data: ' + data);
  			} else {
