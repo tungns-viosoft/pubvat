@@ -15,12 +15,12 @@
               "version": "6.9"
             },
             {
-              "name": "thiendia",
+              "name": "bigo",
               "version": "9.6"
             }
           ],
           "hw": {
-            "brand": "bphone",
+            "brand": "google",
             "cpus": 8,
             "ram": 32,
             "nic": "baaa"
@@ -120,12 +120,12 @@
               "version": "6.9"
             },
             {
-              "name": "thiendia",
+              "name": "bigo",
               "version": "9.6"
             }
           ],
           "hw": {
-            "brand": "bphone",
+            "brand": "intel",
             "cpus": 8,
             "ram": 32,
             "nic": "baaa"
@@ -225,12 +225,12 @@
               "version": "6.9"
             },
             {
-              "name": "thiendia",
+              "name": "bigo",
               "version": "9.6"
             }
           ],
           "hw": {
-            "brand": "bphone",
+            "brand": "ibm",
             "cpus": 8,
             "ram": 32,
             "nic": "baaa"
@@ -330,12 +330,12 @@
               "version": "6.9"
             },
             {
-              "name": "thiendia",
+              "name": "bigo",
               "version": "9.6"
             }
           ],
           "hw": {
-            "brand": "bphone",
+            "brand": "samsung",
             "cpus": 8,
             "ram": 32,
             "nic": "baaa"
@@ -428,19 +428,19 @@
         "usecase": "srt2",
         "vnfname": "xxvnf",
         "vnf": {
-          "os": "bos",
+          "os": "redhat",
           "sw": [
             {
               "name": "bkav",
               "version": "6.9"
             },
             {
-              "name": "thiendia",
+              "name": "bigo",
               "version": "9.6"
             }
           ],
           "hw": {
-            "brand": "bphone",
+            "brand": "hp",
             "cpus": 8,
             "ram": 32,
             "nic": "baaa"
@@ -540,12 +540,12 @@
               "version": "6.9"
             },
             {
-              "name": "thiendia",
+              "name": "bigo",
               "version": "9.6"
             }
           ],
           "hw": {
-            "brand": "bphone",
+            "brand": "nokia",
             "cpus": 8,
             "ram": 32,
             "nic": "baaa"
@@ -645,12 +645,12 @@
               "version": "6.9"
             },
             {
-              "name": "thiendia",
+              "name": "bigo",
               "version": "9.6"
             }
           ],
           "hw": {
-            "brand": "bphone",
+            "brand": "intel",
             "cpus": 8,
             "ram": 32,
             "nic": "baaa"
