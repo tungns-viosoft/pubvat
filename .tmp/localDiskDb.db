@@ -4,9 +4,9 @@
     "blog": [],
     "performance": [
       {
-        "session": "yyy",
-        "usecase": "hehe",
-        "vnfname": "srt",
+        "session": "911",
+        "usecase": "crucio",
+        "vnfname": "l2forwarding",
         "vnf": {
           "os": "bos",
           "sw": [
@@ -109,9 +109,9 @@
         "id": 1
       },
       {
-        "session": "yyy",
-        "usecase": "hehe",
-        "vnfname": "srt",
+        "session": "526",
+        "usecase": "srt2.0",
+        "vnfname": "l2forwarding",
         "vnf": {
           "os": "bos",
           "sw": [
@@ -144,8 +144,8 @@
         "lines": [
           {
             "zero_loss": [
-              3,
-              2,
+              34,
+              21,
               21,
               4,
               12,
@@ -160,19 +160,19 @@
               6,
               25,
               2,
-              3,
+              334,
               13
             ]
           },
           {
             "zero_loss": [
-              5,
-              7,
-              3,
-              9,
+              50,
+              75,
+              30,
+              92,
               17,
               5,
-              2
+              22
             ]
           },
           {
@@ -182,7 +182,7 @@
               12,
               3,
               7,
-              4,
+              45,
               6
             ]
           },
@@ -194,7 +194,7 @@
               59,
               7,
               3,
-              2
+              256
             ]
           },
           {
@@ -214,9 +214,9 @@
         "id": 2
       },
       {
-        "session": "yyy",
-        "usecase": "hehe",
-        "vnfname": "srt",
+        "session": "123",
+        "usecase": "srt3.0",
+        "vnfname": "l2forwarding",
         "vnf": {
           "os": "bos",
           "sw": [
@@ -319,9 +319,9 @@
         "id": 3
       },
       {
-        "session": "yyy",
-        "usecase": "srt",
-        "vnfname": "my vnf",
+        "session": "90",
+        "usecase": "crucio",
+        "vnfname": "l2forwarding",
         "vnf": {
           "os": "bos",
           "sw": [
@@ -424,9 +424,9 @@
         "id": 4
       },
       {
-        "session": "yyy",
-        "usecase": "srt2",
-        "vnfname": "xxvnf",
+        "session": "123",
+        "usecase": "srt2.0",
+        "vnfname": "l3forwarding",
         "vnf": {
           "os": "redhat",
           "sw": [
@@ -463,14 +463,14 @@
               7,
               31,
               2,
-              5,
+              55,
               61,
               7
             ]
           },
           {
             "zero_loss": [
-              8,
+              123,
               7,
               6,
               5,
@@ -498,7 +498,7 @@
               3,
               7,
               42,
-              6
+              656
             ]
           },
           {
@@ -517,7 +517,7 @@
               54,
               93,
               6,
-              4,
+              423,
               23,
               8,
               2
@@ -529,9 +529,9 @@
         "id": 5
       },
       {
-        "session": "yyy",
-        "usecase": "srt",
-        "vnfname": "kaka",
+        "session": "12",
+        "usecase": "crucio",
+        "vnfname": "l3forwarding",
         "vnf": {
           "os": "bos",
           "sw": [
@@ -634,9 +634,9 @@
         "id": 6
       },
       {
-        "session": "unx",
+        "session": "123",
         "usecase": "crucio",
-        "vnfname": "xfaster",
+        "vnfname": "l2forwarding",
         "vnf": {
           "os": "bos",
           "sw": [
@@ -730,7 +730,7 @@
               4,
               6,
               28,
-              2
+              23
             ]
           }
         ],
