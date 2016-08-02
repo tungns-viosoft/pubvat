@@ -21,7 +21,7 @@
           ],
           "hw": {
             "brand": "google",
-            "cpus": 8,
+            "cpus": 6,
             "ram": 32,
             "nic": "baaa"
           }
@@ -126,7 +126,7 @@
           ],
           "hw": {
             "brand": "intel",
-            "cpus": 8,
+            "cpus": 16,
             "ram": 32,
             "nic": "baaa"
           }
@@ -231,7 +231,7 @@
           ],
           "hw": {
             "brand": "ibm",
-            "cpus": 8,
+            "cpus": 4,
             "ram": 32,
             "nic": "baaa"
           }
@@ -441,7 +441,7 @@
           ],
           "hw": {
             "brand": "hp",
-            "cpus": 8,
+            "cpus": 1,
             "ram": 32,
             "nic": "baaa"
           }
@@ -651,7 +651,7 @@
           ],
           "hw": {
             "brand": "intel",
-            "cpus": 8,
+            "cpus": 1,
             "ram": 32,
             "nic": "baaa"
           }
