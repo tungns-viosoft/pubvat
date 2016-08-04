@@ -28,7 +28,7 @@ module.exports.policies = {
 
   // AboutController: {
   //   view: 'tungnsAuth'
-  // }
+  // },
 
   // '*': true,
 

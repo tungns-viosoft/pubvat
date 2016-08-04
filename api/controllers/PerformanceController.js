@@ -39,10 +39,10 @@ module.exports = {
  	browse: function(req,res){
 		Performance.find().exec(function(err, data){
  			if(err){
- 				console.log('Error Performance create. Data: ' + data);
+ 				console.log('Error Performance browse. Data: ' + data);
  			} else {
- 				console.log('Found all Performance');
- 				console.log(data);
+ 				console.log('Found all Performances');
+ 				// console.log(data);
  				res.send(data);
  			}
  		});
@@ -78,17 +78,35 @@ module.exports = {
 
 	view: function(req,res){
 
-		Performance.findOne({"vnfname": "srt"}).exec(function (err, data){
+		Performance.find({}).exec(function (err, data){
 			if(err){
 				console.log('Error findOne Performance');
 				return res.serverError();
 			}
 			console.log(data);
 
+			// req.session.user = "tungns";
+			// res.cookie("user", "tungns");
+
+
 			res.view('performance', {
 				title: 'Performance', 
-				chartData: data
+				chartData: data[0]
 			});
+		});
+	},
+
+	manage: function(req,res){
+
+		Performance.find().exec(function(err, data){
+			if(err){
+				console.log('Error Performance create. Data: ' + data);
+			} else {
+				res.view('manage', {
+					title: 'Manage',
+					chartData: data
+				});
+			}
 		});
 	}
 };

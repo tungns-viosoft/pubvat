@@ -113,6 +113,8 @@ module.exports.routes = {
 
 /*** SERVER ***/
 
+  '/manage' : 'PerformanceController.manage',
+
   'GET /api/performance': 'PerformanceController.browse',
   
   'POST /api/performance': 'PerformanceController.add',

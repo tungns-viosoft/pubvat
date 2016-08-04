@@ -1,0 +1,130 @@
+result [
+  {
+    "points": [
+      64,
+      128,
+      256,
+      512,
+      1024,
+      1280,
+      1518
+    ],
+    "lines": [
+      {
+        "zero_loss": [
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80
+        ],
+        "createdAt": "2016-07-07T04:19:26.333Z",
+        "session": "1467865134932"
+      },
+      {
+        "zero_loss": [
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80
+        ],
+        "createdAt": "2016-07-07T04:22:50.616Z",
+        "session": "1467865340744"
+      }
+    ]
+  },
+  "vnf": {
+    "output": [
+      {
+        "vnf": [],
+        "name": "Throughput",
+        "id": 2
+      }
+    ],
+    "sw_ings": [],
+    "name": "L2FWD",
+    "description": null,
+    "owner": 9,
+    "manager": false,
+    "sut_node": 1,
+    "sut_mem": 12,
+    "sut_cpu": 12,
+    "sut_nic": 2,
+    "sut_qat": false,
+    "tf_node": 1,
+    "tf_mem": 12,
+    "tf_cpu": 12,
+    "tf_nic": 2,
+    "tf_qat": false,
+    "id": 36
+  },
+  "pf": {
+    "description": "platform dell lab",
+    "name": "DellPlatform",
+    "id": 17
+  },
+  "name": "MyTest1",
+  "id": 40
+},
+[
+  {
+    "name": "l2-forward",
+    "version": "1.2.3",
+    "source": "10.1.128.206:8080/l2-forward.tar.gz",
+    "method": "http",
+    "param": {},
+    "type": "app",
+    "host": 1
+  },
+  {
+    "name": "traffic-gen",
+    "version": "3.2.1",
+    "source": "10.1.128.206:8080/traffic-gen-2.9.2.tar.gz",
+    "method": "http",
+    "param": {},
+    "type": "app",
+    "host": 2
+  }
+],
+[
+  {
+    "param": [
+      {
+        "name": "dpdk",
+        "version": "2.2.0",
+        "source": "http://10.1.128.206:8080/dpdk-2.2.0.zip",
+        "method": "http",
+        "param": {},
+        "type": "lib",
+        "host": 0
+      }
+    ]
+  },
+  {
+    "param": [
+      {
+        "name": "dpdk",
+        "version": "2.1.0",
+        "source": "http://10.1.128.206:8080/dpdk-2.1.0.tar.gz",
+        "method": "http",
+        "param": {},
+        "type": "lib",
+        "host": 0
+      },
+      {
+        "name": "pktgen",
+        "version": "2.9.2",
+        "source": "http://10.1.128.206:8080/pktgen-2.9.2.tar.gz",
+        "method": "http",
+        "param": {},
+        "type": "lib",
+        "host": 0
+      }
+    ]
+  }
+]

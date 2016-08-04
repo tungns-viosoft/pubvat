@@ -8,6 +8,11 @@
 module.exports = function(req, res, next) {
 
   // TODO
+
+
+  if(!req.session.user ){
+  	return res.notFound();
+  }
   return next();
 
 };
