@@ -55,3 +55,33 @@ textarea#about-content-area {
 div.about-button-submit-place {
 	float: right;
 }
+
+/******** TABLE ********/
+
+table {
+	background-color: white;
+}
+
+table th {
+	color: #fff;
+	background-color: #203C49;
+	text-align: center;
+	/*background: linear-gradient(to bottom right, #203C49, #2E5669);*/
+}
+
+table th, table td{
+	border: 1px solid #203C49;
+	padding: 0px 20px;
+}
+
+table tr td {
+	border: 1px solid gray;
+}
+
+table tr td:first-child {
+}
+
+#control-test-table {
+	width: 500px;
+}
+
