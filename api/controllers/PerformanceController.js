@@ -14,10 +14,11 @@ module.exports = {
  		Performance.create(x).exec(function(err, data){
  			if(err){
  				console.log('Error Performance create. Data: ' + data);
+        res.serverError();
  			} else {
  				console.log('Create Performance success');
  				console.log(data);
- 				res.send(data);
+ 				res.send(200);
  			}
  		});
  	},
@@ -28,6 +29,7 @@ module.exports = {
  		Performance.findOne({"id": id}).exec(function(err, data){
  			if(err){
  				console.log('Error Performance read. Data: ' + data);
+        res.serverError();
  			} else {
  				console.log('Found Performance');
  				console.log(data);
@@ -37,9 +39,10 @@ module.exports = {
  	},
 
  	browse: function(req,res){
-		Performance.find().exec(function(err, data){
+		Performance.find({ visible : 'true' } ).exec(function(err, data){
  			if(err){
  				console.log('Error Performance browse. Data: ' + data);
+        res.serverError();
  			} else {
  				console.log('Found all Performances');
  				// console.log(data);
@@ -50,14 +53,16 @@ module.exports = {
 
  	edit: function(req,res){
 		var id = req.params.id;
+		var visible = req.query.visible;
 
- 		Performance.update({"id": id}).exec(function(err, data){
+ 		Performance.update({"id": id}, {"visible" : visible}).exec(function(err, data){
  			if(err){
  				console.log('Error Performance update. Data: ' + data);
+        res.serverError();
  			} else {
  				console.log('Update Performance');
- 				console.log(data);
- 				res.send(data);
+ 				// console.log(data);
+ 				return res.send(200);
  			}
  		});
  	},
@@ -68,9 +73,10 @@ module.exports = {
  		Performance.destroy({"id": id}).exec(function(err){
  			if(err){
  				console.log('Error Performance destroy');
+        res.serverError();
  			} else {
  				console.log('Destroy Performance');
- 				res.status(200);
+ 				res.send(200);
  			}
  		});
  	},
@@ -89,8 +95,9 @@ module.exports = {
 			// res.cookie("user", "tungns");
 
 
+
 			res.view('performance', {
-				title: 'Performance', 
+				title: 'Performance',
 				chartData: data[0]
 			});
 		});
@@ -101,6 +108,7 @@ module.exports = {
 		Performance.find().exec(function(err, data){
 			if(err){
 				console.log('Error Performance create. Data: ' + data);
+        res.serverError();
 			} else {
 				res.view('manage', {
 					title: 'Manage',

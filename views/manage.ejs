@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/styles/bootstrap-toggle.min.css"> 
+<link rel="stylesheet" href="/styles/bootstrap-toggle.min.css">
 <script src="/js/bootstrap2-toggle.min.js"></script>
 
 <div class="container" ng-app="app" ng-controller="ctrl" >
@@ -7,32 +7,138 @@
 
 			<div class="manage-header">
 				<h2>Enable test</h2>
-				
+
 			</div>
 
 			<table id="control-test-table">
-			<% chartData.forEach(function(chart){ %>
+
 				<tr>
-					<td><%= chart.session %> </td>
-					<td><input type="checkbox" ng-model="db.<%- chart.id %>"></td>
+					<th>
+						Session
+					</th>
+					<th>
+						Visible
+					</th>
 				</tr>
 
-			<% }); %>
 
+				<tr ng-repeat="ch in db">
+					<td>
+            <div  class="testcase-header">
+              Session: {{ch.session}}
+            </div>
+
+            <div class="testcase-content" >
+              <ul style="list-style-type:none">
+                <li>VNF: {{ch.vnfname}}</li>
+                <li>Testcase: {{ch.testcase}} </li>
+              </ul>
+            </div>
+          </td>
+					<td >
+            <div ng-if="ch.visible===undefined || ch.visible===false">
+              <input class="enable-cb" type="checkbox" value="{{ch.id}}" data-toggle="toggle" />
+            </div>
+            <div ng-if="ch.visible === true">
+              <input class="enable-cb" type="checkbox" value="{{ch.id}}" data-toggle="toggle" checked />
+            </div>
+					</td>
+				</tr>
+
+				<tr style="background-color: #CDAF4E">
+					<td style="font-weight: bold;">
+						All
+					</td>
+					<td>
+						<input class="enable-all" type="checkbox" data-toggle="toggle" />
+					</td>
+				</tr>
 
 			</table>
+
 			<script type="text/javascript">
 
 				angular.module('app', []).controller('ctrl', function($scope){
-					$scope.xxx = true;
-					// setInterval(function(){console.log($scope.xxx);},1000);
-					$scope.database = <%- JSON.stringify(chartData) %>;
 
-					console.log($scope.database);
+					$scope.db = {};
+
+					<% chartData.forEach(function(chart){ %>
+					$scope.db[<%= chart.id %>] = <%- JSON.stringify(chart) %>;
+					$scope.db[<%= chart.id %>].status = true;
+					<% }); %>
+
+
+					$scope.update = function(id){
+						// console.log($scope.db[id].status);
+					}
+
 				});
 
+				$(function(){
+					$('.enable-cb').change(function() {
+						var id = $(this).attr('value');
+						var visible = $(this).prop('checked');
+
+						$.ajax ({
+							url: '/api/performance/' + id + '?visible=' + visible,
+							type: 'PUT',
+							success: function(data){
+//								console.log("success " + data);
+							}
+						});
+
+						// if(visible === false && $('.enable-all').prop(checked) === true){
+
+						// 	$('.enable-all').change(null);
+						// 	$('.enable-all').prop('checked', false);
+						// 	$('.enable-all').change(enableAll);
+						// }
+						if(!enablingAll)
+							sastatus();
+				    });
+
+				    var sastatus = function(){
+				    	$('.enable-all').off('change');
+
+				    	var visible = $('.enable-cb').prop('checked');
+				    	$('.enable-cb').each(function(){
+				    		visible &= $(this).prop('checked');
+				    	});
+				    	if(visible){
+				    		$('.enable-all').bootstrapToggle('on');
+				    	} else {
+				    		$('.enable-all').bootstrapToggle('off');
+				    	}
+
+						$('.enable-all').on('change', enableAll);
+				    }
+
+				    sastatus();
+
+				    var enablingAll = false;
+
+				    var enableAll = function() {
+				    	enablingAll = true;
+						var visible = $(this).prop('checked');
+//						console.log(visible);
+						if(visible === true){
+							$('.enable-cb').bootstrapToggle('on');
+						} else {
+							$('.enable-cb').bootstrapToggle('off');
+						}
+						enablingAll = false;
+
+				    };
+
+					$('.enable-all').on('change', enableAll);
+
+
+				});
+
+
+
 			</script>
+
 		</div>
 	</div>
 </div>
-				

@@ -112,8 +112,9 @@
           }
         ],
         "createdAt": "2016-06-29T08:25:55.750Z",
-        "updatedAt": "2016-06-29T08:25:55.750Z",
-        "id": 1
+        "updatedAt": "2016-08-09T08:39:43.664Z",
+        "id": 1,
+        "visible": true
       },
       {
         "session": "526",
@@ -217,8 +218,9 @@
           }
         ],
         "createdAt": "2016-06-29T08:30:02.687Z",
-        "updatedAt": "2016-06-29T08:30:02.687Z",
-        "id": 2
+        "updatedAt": "2016-08-09T08:39:43.672Z",
+        "id": 2,
+        "visible": true
       },
       {
         "session": "123",
@@ -322,8 +324,9 @@
           }
         ],
         "createdAt": "2016-06-30T03:55:16.684Z",
-        "updatedAt": "2016-06-30T03:55:16.684Z",
-        "id": 3
+        "updatedAt": "2016-08-09T08:53:52.966Z",
+        "id": 3,
+        "visible": true
       },
       {
         "session": "90",
@@ -427,8 +430,9 @@
           }
         ],
         "createdAt": "2016-07-05T02:37:43.053Z",
-        "updatedAt": "2016-07-05T02:37:43.053Z",
-        "id": 4
+        "updatedAt": "2016-08-09T08:53:52.424Z",
+        "id": 4,
+        "visible": true
       },
       {
         "session": "123",
@@ -532,8 +536,9 @@
           }
         ],
         "createdAt": "2016-07-05T02:38:28.592Z",
-        "updatedAt": "2016-07-05T02:38:28.592Z",
-        "id": 5
+        "updatedAt": "2016-08-09T08:53:53.914Z",
+        "id": 5,
+        "visible": false
       },
       {
         "session": "12",
@@ -637,8 +642,9 @@
           }
         ],
         "createdAt": "2016-07-05T02:38:55.193Z",
-        "updatedAt": "2016-07-05T02:38:55.193Z",
-        "id": 6
+        "updatedAt": "2016-08-09T08:53:53.467Z",
+        "id": 6,
+        "visible": false
       },
       {
         "session": "123",
@@ -742,8 +748,9 @@
           }
         ],
         "createdAt": "2016-07-05T03:10:31.385Z",
-        "updatedAt": "2016-07-05T03:10:31.385Z",
-        "id": 7
+        "updatedAt": "2016-08-09T08:39:43.692Z",
+        "id": 7,
+        "visible": true
       }
     ]
   },
@@ -808,6 +815,9 @@
       },
       "lines": {
         "type": "array"
+      },
+      "visible": {
+        "type": "boolean"
       },
       "id": {
         "type": "integer",

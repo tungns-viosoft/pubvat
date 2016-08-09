@@ -42,7 +42,11 @@ module.exports = {
 
   	lines: {
   		type: 'array'
-  	}
+  	}, 
+
+    visible: {
+      type: 'boolean'
+    },
 
   }
 };

@@ -47,7 +47,7 @@ a.navbar-brand.isActived {
 
 
 textarea#about-content-area {
-	resize: vertical; 
+	resize: vertical;
 	height: 200px;
 	width:80%;
 }
@@ -71,7 +71,7 @@ table th {
 
 table th, table td{
 	border: 1px solid #203C49;
-	padding: 0px 20px;
+	padding: 10px 20px;
 }
 
 table tr td {
